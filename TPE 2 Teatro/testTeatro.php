@@ -53,7 +53,7 @@ do{
             {
                 echo "\n Ingrese el nombre de la nueva funcion ";
                 $nomFuncion = trim(fgets(STDIN));
-                echo "\n Ingrese la hora de la funcion: ";
+                echo "\n Ingrese la hora de la funcion en formato 24hrs (hh:mm) : ";
                 $horaIni = trim(fgets(STDIN));
                 echo "\n Ingrese la duracion de la funcion en minutos: ";
                 $tiempo = trim(fgets(STDIN));
@@ -93,7 +93,7 @@ do{
                         break;
 
                         case 2:
-                        echo "\n Ingrese la hora de la funcion: ";
+                        echo "\n Ingrese la hora de la funcion en formato 24hrs (hh:mm) : ";
                         $horaIni = trim(fgets(STDIN));
                         $unTeatro->setFunciones($seleccion,$nroFuncion,$horaIni);
                         break;

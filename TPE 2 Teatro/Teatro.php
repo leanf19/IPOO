@@ -129,14 +129,14 @@ class Teatro
             if($i != $indice)
             {
 
-                //Comprueba que la hora Inicio de la funcion del indice actual no este entre la hora de Inicio y Fin de la nueva funcion
+                //Comprueba que la hora INICIO de la funcion del indice actual no este entre la hora de Inicio y Fin de la nueva funcion
                 $otroHorario = $this->aMinutos($this->funciones[$i]->getHoraInicio());
                 if($auxInicio <= $otroHorario && $otroHorario <= $auxFin)
                     {
 
                         $disponible = false;
                     }
-                //Comprueba que la hora fin de la funcion del indice actual no este entre la hora de Inicio y Fin de la nueva funcion
+                //Comprueba que la hora FIN de la funcion del indice actual no este entre la hora de Inicio y Fin de la nueva funcion
                 $otroHorario = $otroHorario + $this->funciones[$i]->getDuracion();
 
                 if($auxInicio <= $otroHorario && $otroHorario <= $auxFin)
