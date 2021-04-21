@@ -1,6 +1,6 @@
 <?php
 
-
+//Primer parcial IPOO Leandro Fuentes FAI-465 LCC
 class Cuota
 {
     private $numero;

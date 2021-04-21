@@ -1,5 +1,7 @@
 <?php
+//Primer parcial IPOO Leandro Fuentes FAI-465 LCC
 include "Prestamo.php";
+
 
 
 class Financiera
@@ -108,7 +110,7 @@ class Financiera
             {
             $cuotaPagar = $prestamos->darSiguienteCuotaPagar();
             break;
-            //si se encuentra el prestamo con la Id obtenida por parametro se almacena en CuotaPaga y se devuelve sino vuelve null
+            //si se encuentra el prestamo con la Id obtenida por parametro se almacena en CuotaPagar y se devuelve sino vuelve null
             }
         }
         return $cuotaPagar;

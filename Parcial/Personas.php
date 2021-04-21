@@ -1,7 +1,7 @@
 <?php
 
 
-class Persona
+class Personas
 {
 private $nombre;
 private $apellido;
@@ -12,7 +12,7 @@ private $telefono;
 private $neto;
 
     /**
-     * Metodo Constructor de clase Persona
+     * Metodo Constructor de clase Personas
      * @param $nombre
      * @param $apellido
      * @param $dni
@@ -123,7 +123,7 @@ private $neto;
         \nDireccion: {$this->getDireccion()}
         \nEmail: {$this->getEmail()}
         \nTelefono: {$this->getTelefono()}
-        \nNeto: {$this->getNeto()}\n";
+        \nSueldo Neto: {$this->getNeto()}\n";
 
         return $salida;
     }

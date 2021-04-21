@@ -1,6 +1,7 @@
 <?php
-include "Persona.php";
+//Primer parcial IPOO Leandro Fuentes FAI-465 LCC
 include "Cuota.php";
+include "Personas.php";
 
 
 class Prestamo
@@ -157,7 +158,7 @@ private $cliente;
         \nCantidad de Cuotas: {$this->getCantCuotas()}
         \nTaza de interes: {$this->getTazaInteres()}
         \nCuotas: {$this->mostrarCuotas()}
-        \nNeto: {$this->mostrarCliente()}\n";
+        \nCliente: {$this->mostrarCliente()}\n";
 
         return $salida;
     }
