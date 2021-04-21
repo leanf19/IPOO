@@ -117,7 +117,7 @@ private $neto;
 
     public function __toString(): string
     {
-        $salida = "\nNombre teatro: {$this->getNombre()}
+        $salida = "\nNombre: {$this->getNombre()}
         \n Apellido: {$this->getApellido()}
         \n Dni: {$this->getDni()}
         \nDireccion: {$this->getDireccion()}
