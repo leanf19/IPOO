@@ -135,11 +135,11 @@ private $cliente;
 
     public function mostrarCuotas()
     {
-        $texto = "\n";
-        foreach ($this->getCuotas() as $cuota) {
-            $texto .= "{$cuota->__toString()}\n";
+        $salida = "\n";
+        foreach ($this->getCuotas() as $cuotas) {
+            $salida .= "{$cuotas->__toString()}\n";
         }
-        return $texto;
+        return $salida;
     }
 
     public function mostrarCliente()
@@ -153,7 +153,7 @@ private $cliente;
     {
         $salida = "\nId: {$this->getId()}
         \n Codigo de Electrodomestico: {$this->getCodigoElectro()}
-        \n Fecha de otorgamiento: {$this->getFechaOtorgamiento()()}
+        \n Fecha de otorgamiento: {$this->getFechaOtorgamiento()}
         \nCantidad de Cuotas: {$this->getCantCuotas()}
         \nTaza de interes: {$this->getTazaInteres()}
         \nCuotas: {$this->mostrarCuotas()}
@@ -173,7 +173,7 @@ private $cliente;
         $cuotasTemp = array();
         $this->setFechaOtorgamiento(getdate());
         for ($i = 1; $i <= $this->getCantCuotas(); $i++) {
-            $cuotasTemp[$i-1] = new Cuota($i, ($this->getMonto() / $this->getCantCuotas()), $this->calcularInteresPrestamo($i));
+            $cuotasTemp[] = new Cuota($i, ($this->getMonto() / $this->getCantCuotas()), $this->calcularInteresPrestamo($i));
         }
         $this->setCuotas($cuotasTemp);
     }
