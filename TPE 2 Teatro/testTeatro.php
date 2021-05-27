@@ -8,7 +8,7 @@ include "Teatro.php";
 
 //Crea una instancia de la clase teatro con un nombre y direccion genericos
 $cantFunciones = 0;
-$unTeatro = new Teatro("Lido","Corrientes 1885",3);
+$unTeatro = new TeatroTPE3("Lido","Corrientes 1885",3);
 
 
 
@@ -21,12 +21,12 @@ do{
     //Se ejecuta el numero de opcion elegido por el usuario
     switch ($opcion) {
         case 1: //Mostrar la informacion del teatro
-            echo "\n Teatro: ".$unTeatro->getNombre()." ";
+            echo "\n TeatroTP3: ".$unTeatro->getNombre()." ";
             echo "\n Direccion: ".$unTeatro->getDireccion()."\n ";
             break;
 
         case 2: //Cambiar nombre del teatro
-            echo "\n Ingrese el nuevo nombre del Teatro: ";
+            echo "\n Ingrese el nuevo nombre del TeatroTP3: ";
             $nom = trim(fgets(STDIN));
             $unTeatro->setNombre($nom);
             break;
@@ -70,7 +70,7 @@ do{
                 }
             break;
 
-        case 7: //Modificar Funcion
+        case 7: //Modificar FuncionTp3
             if(count($unTeatro->getFunciones())>0)
             {
                 $bucle = true;
@@ -89,25 +89,25 @@ do{
                         case 1:
                         echo "\n Ingrese el nuevo nombre de la funcion: ";
                         $nomFuncion = trim(fgets(STDIN));
-                        $unTeatro->setFunciones($seleccion,$nroFuncion,$nomFuncion);
+                        $unTeatro->modificarFunciones($seleccion,$nroFuncion,$nomFuncion);
                         break;
 
                         case 2:
                         echo "\n Ingrese la hora de la funcion en formato 24hrs (hh:mm) : ";
                         $horaIni = trim(fgets(STDIN));
-                        $unTeatro->setFunciones($seleccion,$nroFuncion,$horaIni);
+                        $unTeatro->modificarFunciones($seleccion,$nroFuncion,$horaIni);
                         break;
 
                         case 3:
                         echo "\n Ingrese la duracion de la funcion en minutos: ";
                         $tiempo = trim(fgets(STDIN));
-                        $unTeatro->setFunciones($seleccion,$nroFuncion,$tiempo);
+                        $unTeatro->modificarFunciones($seleccion,$nroFuncion,$tiempo);
                         break;
 
                         case 4:
                         echo "\n Ingrese el precio de la entrada: ";
                         $precio = trim(fgets(STDIN));
-                        $unTeatro->setFunciones($seleccion,$nroFuncion,$precio);
+                        $unTeatro->modificarFunciones($seleccion,$nroFuncion,$precio);
                         break;
                         }
 

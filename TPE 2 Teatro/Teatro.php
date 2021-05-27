@@ -19,7 +19,7 @@ class Teatro
         $this->nombre = $nom;
         $this->direccion = $dir;
         $this->cantFunciones = $cant;
-        $this->funciones = new Funcion($nomFuncion,$hora,$tiempo,$costo);
+        $this->funciones = new FuncionTp3($nomFuncion,$hora,$tiempo,$costo);
     }
 */
     public function getNombre()
@@ -55,7 +55,7 @@ class Teatro
 
     public function agregarFunciones($indice,$nom,$hora,$tiempo,$costo)
     {
-        $auxFuncion = new Funcion($nom,$hora,$tiempo,$costo);
+        $auxFuncion = new FuncionTp3($nom,$hora,$tiempo,$costo);
         $this->funciones[$indice] = $auxFuncion;
     }
 
